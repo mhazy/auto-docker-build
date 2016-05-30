@@ -6,7 +6,6 @@ const handlers = {
      * @param reply
      */
     webhook: (request, reply) => {
-        request.log(['github'], request.payload);
         reply();
     }
 };
