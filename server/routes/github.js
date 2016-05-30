@@ -8,6 +8,10 @@ module.exports = [
         config: {
             description: 'Handles webhook requests for GitHub repositories',
             tags: ['webhook', 'github'],
+            auth: {
+                strategies: ["githubwebhook"],
+                payload: 'required'
+            }
         }
     }
 ];
