@@ -1,15 +1,18 @@
 {
-  "name": "ghwebhooks",
+  "name": "auto-docker-build",
   "version": "1.0.0",
-  "description": "",
+  "description": "Service for managing automated docker builds from GitHub PRs",
   "main": "server.js",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/lab -s"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "docker",
+    "github"
+  ],
+  "author": "Mark Hayes (mcleodm@gmail.com) - https://github.com/mhazy",
   "license": "MIT",
   "dependencies": {
     "boom": "3.2.1",
