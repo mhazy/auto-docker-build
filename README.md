@@ -1,10 +1,12 @@
 # auto-docker-build
 
-Service for managing automated docker builds from GitHub PRs 
+[![Build Status](https://travis-ci.org/mhazy/auto-docker-build.svg?branch=master)](https://travis-ci.org/mhazy/auto-docker-build)
+
+Service for managing automated docker builds from GitHub PRs
 
 ## Goals
 
-1. Receive webhook call from GitHub for PR
+1. Receive webhook request from GitHub for PR
 2. Dispatch SQS message for docker build service(s) to:
      - Retrieve code branch from GitHub
      - Build docker image
