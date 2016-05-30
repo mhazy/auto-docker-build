@@ -1,4 +1,4 @@
-var controller = require('../controllers/github');
+const controller = require('../controllers/github');
 
 module.exports = [
     {

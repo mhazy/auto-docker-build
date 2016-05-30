@@ -1,6 +1,4 @@
-var handlers;
-
-handlers = {
+const handlers = {
     /**
      * Parse a github webhook and it pass it to the appropriate handler
      *

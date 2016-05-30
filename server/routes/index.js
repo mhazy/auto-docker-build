@@ -1,24 +1,12 @@
 'use strict';
 
 module.exports = function () {
-  var routers,
-    routes;
-
-  routers = [
+  const routers = [
     './github',
   ];
 
-  routes = [];
-
-  routers.forEach(function (route) {
-    var tempRoute;
-    try {
-      tempRoute = require(route);
-      routes = routes.concat(tempRoute);
-    } catch (e) {
-      console.error('Unable to load route:', route, e);
-    }
-  });
-
-  return routes;
+  return routers.reduce((routes, route) => {
+      const loadedRoutes = require(route);
+      return routes.concat(loadedRoutes);
+  }, []);
 };

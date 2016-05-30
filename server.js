@@ -1,17 +1,11 @@
 'use strict';
 
-var hapi;
-var server;
-var config;
-var plugins;
-var routes;
+const hapi = require('hapi');
+const config = require('./server/config');
+const plugins = require('./server/config/plugins');
+const routes = require('./server/routes');
 
-config = require('./server/config');
-plugins = require('./server/config/plugins');
-routes = require('./server/routes');
-hapi = require('hapi');
-
-server = new hapi.Server();
+const server = new hapi.Server();
 
 // Setup server connection
 server.connection({
@@ -38,3 +32,5 @@ server
       console.log('Hapi server started @ ' + server.info.uri.replace('0.0.0.0', 'localhost'));
     });
   });
+
+module.exports = server;

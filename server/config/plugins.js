@@ -1,14 +1,10 @@
 'use strict';
 
-var config;
-var path;
-var logEvents;
-var goodOptions;
+const config = require('./index');
+const path = require('path');
 
-config = require('./index');
-path = require('path');
 
-logEvents = {
+const logEvents = {
   response: '*',
   log: '*',
   request: '*',
@@ -17,7 +13,7 @@ logEvents = {
   model: '*'
 };
 
-goodOptions = {
+const goodOptions = {
   ops: {
     interval: 1000
   },
